@@ -871,7 +871,7 @@ window.addEventListener('DOMContentLoaded',function(){
   });
 
   // 로그인/로그아웃
-  function doLogin(){sb.auth.signInWithOAuth({provider:'google',options:{redirectTo:window.location.href}});}
+  function doLogin(){sb.auth.signInWithOAuth({provider:'google',options:{redirectTo:'https://marvelous-nougat-d5cae5.netlify.app'}});}
   document.getElementById('loginBtn').addEventListener('click',doLogin);
   document.getElementById('bannerLoginBtn').addEventListener('click',doLogin);
   document.getElementById('logoutBtn').addEventListener('click',function(){
