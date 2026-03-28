@@ -866,8 +866,8 @@ window.addEventListener('DOMContentLoaded',function(){
     else setLoggedOut();
   });
   sb.auth.onAuthStateChange(function(event,session){
-    if(session&&session.user){if(!currentUser){setLoggedIn(session.user);loadFromSupabase();}}
-    else setLoggedOut();
+    if(event==='SIGNED_IN'&&session&&session.user){setLoggedIn(session.user);loadFromSupabase();}
+    else if(event==='SIGNED_OUT'){setLoggedOut();}
   });
 
   // 로그인/로그아웃
